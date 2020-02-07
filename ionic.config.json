@@ -1,5 +1,7 @@
 {
   "name": "tpnote-qrcore",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

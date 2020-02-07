@@ -1,14 +1,28 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      QR Code - TP Noté
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+
+
+
+  <ion-list>
+    <ion-item *ngFor="let content of contents">
+      <ion-label>
+        <h2>{{ content.text }}</h2>
+        <h3>{{ content.scannedAt }}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" (click)="scan()">
+    <ion-fab-button>
+      <ion-icon name="qr-scanner"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
 </ion-content>
